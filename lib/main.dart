@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         child: 
           Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text('Sign in to Continue', 
@@ -92,7 +92,81 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-              )
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width * .40,
+                child: Row(
+                children: [
+                  Container(
+                    height: 55,
+                    width: 55,
+                    color: Colors.grey[300],
+                  ),
+                  Expanded(
+                    child: TextField(
+                    obscureText: false,
+                    maxLines: 1,
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                      border: InputBorder.none,
+                      labelText: "What's Happening",
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width * .40,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(height: 40, width: 40, color: Colors.blue,),
+                        SizedBox(width: 5,),
+                        Container(height: 40, width: 40, color: Colors.red,),
+                        SizedBox(width: 5,),
+                        Container(height: 40, width: 40, color: Colors.green,),
+                        SizedBox(width: 5,),
+                        Container(height: 40, width: 40, color: Colors.yellow,),
+                        SizedBox(width: 5,),
+                        Container(height: 40, width: 40, color: Colors.orange,),
+                      ],
+                    ),
+                    TextButton(onPressed: (){
+                      }, 
+                      style: ButtonStyle(
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                        )
+                      ),
+                      padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
+                      backgroundColor: MaterialStateProperty.all(Colors.blue),
+                      foregroundColor: MaterialStateProperty.all(Colors.white),
+                      overlayColor: MaterialStateProperty.all(Colors.red[300]),
+                      textStyle: MaterialStateProperty.all(
+                        TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                        )
+                      ),
+                      ),
+                      child: Text('Tweet', 
+                        
+                      ),
+                    ),
+                  ],
+                  ),
+              ),
             ],
           )
       ) /* :
