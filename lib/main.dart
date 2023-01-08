@@ -15,6 +15,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size dsize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: Text('Hello World'),
@@ -149,7 +150,7 @@ class HomeScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(30.0),
                         )
                       ),
-                      padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
+                      padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 25, vertical: 15)),
                       backgroundColor: MaterialStateProperty.all(Colors.blue),
                       foregroundColor: MaterialStateProperty.all(Colors.white),
                       overlayColor: MaterialStateProperty.all(Colors.red[300]),
@@ -167,6 +168,47 @@ class HomeScreen extends StatelessWidget {
                   ],
                   ),
               ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                height: 300,
+                width: dsize.width,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    containerNumber("1", Colors.red),
+                    containerNumber("2", Colors.green),
+                    containerNumber("3", Colors.blue),
+                    containerNumber("4", Colors.yellow),
+                    containerNumber("5", Colors.orange),
+                    containerNumber("6", Colors.pink),
+                    containerNumber("7", Colors.brown),
+                    containerNumber("8", Colors.cyan),
+                  ],
+                ),
+              )
+              /* Row(
+                children: [
+                  containerNumber(context, "X", Colors.blue),
+                  containerNumber(context, "A", Colors.green),
+                  containerNumber(context, "3", Colors.red),
+                  containerNumber(context, "4", Colors.yellow),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+                ),
+              Wrap(
+                direction: Axis.horizontal,
+                children: [
+                  containerNumber(context, "1", Colors.blue),
+                  containerNumber(context, "2", Colors.green),
+                  containerNumber(context, "3", Colors.red),
+                  containerNumber(context, "4", Colors.yellow),
+                ],
+              ) */
             ],
           )
       ) /* :
@@ -176,5 +218,24 @@ class HomeScreen extends StatelessWidget {
         width: MediaQuery.of(context).size.width * .5,
       ), */
     );
+  }
+
+  Container containerNumber(String value, Color dcolor) {
+    return Container(
+                  height: 250,
+                  width: 500,
+                  color: dcolor,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(value,
+                        style: TextStyle(
+                          fontSize: 50,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                );
   }
 }
