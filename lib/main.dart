@@ -18,11 +18,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Color.fromARGB(255, 212, 193, 248),
+        color: Color.fromARGB(255, 216, 217, 207),
         width: MediaQuery.of(context).size.width,
         child: Center(
           child: Card(
-            color: Color.fromARGB(255, 41, 29, 90),
+            color: Color.fromARGB(255, 35, 55, 99),
             elevation: 50,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(40.0),
@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   const CircleAvatar(
                     radius: 70,
-                    backgroundColor: Colors.red,
+                    backgroundColor: Color.fromARGB(255, 255, 110, 49),
                     foregroundImage: AssetImage(
                       "assets/images/myself.png",
                     ),
@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.normal,
-                      color: Colors.grey,
+                      color: Color.fromARGB(255, 255, 235, 183),
                     ),
                   ),
                   const SizedBox(height: 15),
@@ -69,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                       children: const <TextSpan>[
                         TextSpan(text: 'Ateneo de Davao University', style: TextStyle(color: Colors.blue)),
                         TextSpan(text: ', presently studying',),
-                        TextSpan(text: ' Information Technology.', style: TextStyle(color: Colors.purple)),
+                        TextSpan(text: ' Information Technology.', style: TextStyle(color: Colors.blue)),
                         TextSpan(text: ' Learning',),
                         TextSpan(text: ' Flutter', style: TextStyle(color: Colors.cyan)),
                         TextSpan(text: ' and',),
@@ -87,8 +87,8 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                       padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
-                      backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 113, 91, 182)),
-                      foregroundColor: MaterialStateProperty.all(Colors.white),
+                      backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 255, 235, 183)),
+                      foregroundColor: MaterialStateProperty.all(Colors.black),
                       overlayColor: MaterialStateProperty.all(Colors.grey),
                       textStyle: MaterialStateProperty.all(
                         TextStyle(
@@ -107,42 +107,42 @@ class HomeScreen extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 15),
                       icon: FaIcon(
                         FontAwesomeIcons.facebook,
-                        color: Colors.grey,
+                        color: Color.fromARGB(255, 173, 142, 112),
                         )
                       ),
                       IconButton(onPressed: (){}, 
                       padding: EdgeInsets.symmetric(horizontal: 15),
                       icon: FaIcon(
                         FontAwesomeIcons.instagram,
-                        color: Colors.grey,
+                        color: Color.fromARGB(255, 173, 142, 112),
                         )
                       ),
                       IconButton(onPressed: (){}, 
                       padding: EdgeInsets.symmetric(horizontal: 15),
                       icon: FaIcon(
                         FontAwesomeIcons.twitter,
-                        color: Colors.grey,
+                        color: Color.fromARGB(255, 173, 142, 112),
                         )
                       ),
                       IconButton(onPressed: (){}, 
                       padding: EdgeInsets.symmetric(horizontal: 15),
                       icon: FaIcon(
                         FontAwesomeIcons.discord,
-                        color: Colors.grey,
+                        color: Color.fromARGB(255, 173, 142, 112),
                         )
                       ),
                       IconButton(onPressed: (){}, 
                       padding: EdgeInsets.symmetric(horizontal: 15),
                       icon: FaIcon(
                         FontAwesomeIcons.linkedin,
-                        color: Colors.grey,
+                        color: Color.fromARGB(255, 173, 142, 112),
                         )
                       ),
                       IconButton(onPressed: (){}, 
                       padding: EdgeInsets.symmetric(horizontal: 15),
                       icon: FaIcon(
                         FontAwesomeIcons.dev,
-                        color: Colors.grey,
+                        color: Color.fromARGB(255, 173, 142, 112),
                         )
                       ),
                     ],
