@@ -61,13 +61,21 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15),
-                  Text(
-                    "A kiddo who uses Bootstrap and Laravel in Web development. Currently playing around with design via Figma",
+                  RichText(
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.normal,
-                      color: Colors.white,
+                    text: TextSpan(
+                      text: 'A student of ',
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                      children: const <TextSpan>[
+                        TextSpan(text: 'Ateneo de Davao University', style: TextStyle(color: Colors.blue)),
+                        TextSpan(text: ', presently studying',),
+                        TextSpan(text: ' Information Technology.', style: TextStyle(color: Colors.purple)),
+                        TextSpan(text: ' Learning',),
+                        TextSpan(text: ' Flutter', style: TextStyle(color: Colors.cyan)),
+                        TextSpan(text: ' and',),
+                        TextSpan(text: ' React', style: TextStyle(color: Colors.cyan)),
+                        TextSpan(text: ' this semester.',),
+                      ],
                     ),
                   ),
                   const SizedBox(height: 15),
